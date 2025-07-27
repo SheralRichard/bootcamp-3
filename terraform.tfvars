@@ -1,0 +1,13 @@
+subscription_id      = "3581aac0-8515-47ec-85ea-b6de3c2854b0"
+resource_group_name  = "jenkins-demo-rg"
+location             = "East US"
+vnet_name            = "jenkins-demo-vnet"
+vnet_address_space   = "10.0.0.0/16"
+subnet_name          = "jenkins-demo-subnet"
+subnet_prefix        = "10.0.1.0/24"
+nic_name             = "jenkins-demo-nic"
+vm_name              = "jenkins-demo-vm"
+vm_size              = "Standard_B1s"  # Cheap and small VM
+admin_username       = "azureuser"
+admin_password       = "P@ssw0rd12345!"  # Must meet Azure complexity rules
+storage_account_name = "jenkinsstoragedemo1234"  # must be globally unique, lowercase only, no hyphens
