@@ -7,38 +7,33 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/SheralRichard/bootcamp-3'
             }
         }
-
         stage('Terraform Initialize') {
             steps {
-                sh '''
+                bat '''
                     terraform init
                 '''
             }
         }
-
         stage('Terraform Validate') {
             steps {
-                sh '''
+                bat '''
                     terraform validate
                 '''
             }
         }
-
         stage('Terraform Plan') {
             steps {
-                sh '''
+                bat '''
                     terraform plan -out=tfplan
                 '''
             }
         }
-
         stage('Terraform Apply') {
             steps {
-                sh '''
+                bat '''
                     terraform apply -auto-approve tfplan
                 '''
             }
         }
     }
 }
-
